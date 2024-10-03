@@ -9,9 +9,8 @@
     <a href="/new">Add a new message</a>
     <%for(let i=0;i<messages.length;i++){%>
         <div>
-            <p>Text: <%=messages[i].text%></p>
-            <p>User: <%=messages[i].user%></p>
-            <p>Date: <%=messages[i].added%></p>
+            <p><%=messages[i].user%>: <%=messages[i].text%></p>
+            <a href='/messages/<%=i%>'><button>Open</button></a>
         </div>
         <hr>
         <%}%>

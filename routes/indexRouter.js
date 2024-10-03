@@ -28,4 +28,8 @@ indexRouter.post('/new', (req, res) => {
     res.redirect("/")
 })
 
+indexRouter.get('/messages/:id', (req, res) => {
+    res.render('message',{message:messages[req.params.id]})
+})
+
 module.exports = indexRouter;
